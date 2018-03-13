@@ -1,4 +1,4 @@
-dtb-$(CONFIG_ARCH_MSM8996) += msm8996-v2-pmi8994-cdp.dtb \
+dtb-$(CONFIG_ARCH_MSM8996_DISABLED_FOR_PME) += msm8996-v2-pmi8994-cdp.dtb \
 	msm8996-v2-pmi8994-mtp.dtb \
 	msm8996-v2-pmi8994-pmk8001-cdp.dtb \
 	msm8996-v2-pmi8994-pmk8001-mtp.dtb \
@@ -179,6 +179,175 @@ dtb-$(CONFIG_ARCH_MSM8998) += msm8998-sim.dtb \
 	msm8998-v2.1-interposer-sdm660-mtp.dtb \
 	msm8998-v2.1-interposer-sdm660-qrd.dtb
 endif
+# HTC msm8996 device dtbs
+dtb-$(CONFIG_ARCH_MSM8996) += \
+	msm8996-v3-htc_pme-pvt.dtb \
+	msm8996-v3-htc_pme-xc.dtb \
+	msm8996-v3-htc_pme-xb.dtb \
+	msm8996-v3-htc_pme-xa.dtb \
+	msm8996-v2-htc_pme-xb.dtb \
+	msm8996-v2-htc_pme-xa.dtb \
+	msm8996-v2-htc_evm.dtb \
+	msm8996-v3-htc_pmeuhljapan-xa.dtb \
+	msm8996-v3-htc_pmeuhljapan-xb.dtb \
+	msm8996-v3-htc_pmewhl-xd.dtb \
+	msm8996-v3-htc_pmewhl-pvt.dtb \
+	msm8996-v3-htc_pmeuhljapan-pvt.dtb \
+
+dtb-$(CONFIG_ARCH_MDM9640) += mdm9640-sim.dtb \
+	mdm9640-rumi.dtb \
+	mdm9640-emmc-cdp.dtb \
+	mdm9640-nand-cdp.dtb \
+	mdm9640-mtp.dtb \
+	mdm9640-v1-mtp.dtb \
+	mdm9640-v1-pmk8001-mtp.dtb \
+	mdm9640-v2-mtp.dtb \
+	mdm9640-v2-pmk8001-mtp.dtb \
+
+
+dtb-$(CONFIG_ARCH_MDM9650) += mdm9650-sim.dtb \
+	mdm9650-rumi.dtb \
+	mdm9650-emmc-cdp.dtb \
+	mdm9650-nand-cdp.dtb \
+	mdm9650-emmc-mtp.dtb \
+	mdm9650-nand-mtp.dtb \
+	mdm9650-ttp.dtb \
+	mdm9650-nand-dualwifi-mtp.dtb \
+	mdm9650-v1.1-emmc-cdp.dtb \
+	mdm9650-v1.1-nand-cdp.dtb \
+	mdm9650-v1.1-emmc-mtp.dtb \
+	mdm9650-v1.1-nand-mtp.dtb \
+	mdm9650-v1.1-nand-dualwifi-mtp.dtb \
+	mdm9650-v1.1-nand-ccard.dtb \
+	mdm9650-v1.1-nand-ccard-v2.dtb \
+	mdm9650-v1.1-emmc-pcie-ep-mtp.dtb \
+	mdm9650-v1.1-nand-pcie-ep-mtp.dtb \
+	mdm9650-v1.1-nand-cv2x.dtb
+
+dtb-$(CONFIG_ARCH_SDX20) += sdx20-emmc-cdp.dtb \
+	sdx20-emmc-mtp.dtb \
+	sdx20-nand-cdp.dtb \
+	sdx20-nand-mtp.dtb \
+	sdx20-nand-dualwifi-mtp.dtb \
+	sdx20-nand-dualwifi-cdp.dtb \
+	sdx20-v2-emmc-cdp.dtb \
+	sdx20-v2-emmc-mtp.dtb \
+	sdx20-v2-nand-cdp.dtb \
+	sdx20-v2-nand-mtp.dtb \
+	sdx20-v2-nand-dualwifi-mtp.dtb \
+	sdx20-v2-nand-dualwifi-cdp.dtb \
+	sdx20-v2-nand-singlewifi-dualwificonf-mtp.dtb \
+	sdx20-emmc-pcie-ep-mtp.dtb \
+	sdx20-nand-pcie-ep-mtp.dtb \
+	sdx20-v2-emmc-pcie-ep-mtp.dtb \
+	sdx20-v2-nand-pcie-ep-mtp.dtb
+
+dtb-$(CONFIG_ARCH_MSM8937) += msm8937-rumi.dtb \
+	msm8937-pmi8950-cdp.dtb \
+	msm8937-pmi8937-cdp.dtb \
+	msm8937-pmi8940-cdp.dtb \
+	msm8937-pmi8950-ext-codec-cdp.dtb \
+	msm8937-pmi8950-mtp.dtb \
+	msm8937-pmi8937-mtp.dtb \
+	msm8937-pmi8940-mtp.dtb \
+	msm8937-pmi8950-rcm.dtb \
+	msm8937-pmi8937-rcm.dtb \
+	msm8937-pmi8940-rcm.dtb \
+	msm8937-pmi8950-qrd-sku1.dtb \
+	msm8937-pmi8937-qrd-sku2.dtb \
+	msm8937-pmi8950-qrd-sku1-dvt1.dtb \
+	msm8937-pmi8937-qrd-sku2-dvt1.dtb \
+	apq8037-pmi8950-cdp.dtb \
+	apq8037-pmi8937-cdp.dtb \
+	apq8037-pmi8950-mtp.dtb \
+	apq8037-pmi8937-mtp.dtb
+
+dtb-$(CONFIG_ARCH_MSM8917) += msm8917-rumi.dtb \
+	apq8017-pmi8937-cdp.dtb \
+	apq8017-pmi8937-mtp.dtb \
+	apq8017-pmi8950-cdp.dtb \
+	apq8017-pmi8950-mtp.dtb \
+	msm8917-pmi8937-cdp.dtb \
+	msm8917-pmi8937-mtp.dtb \
+	msm8917-pmi8940-cdp.dtb \
+	msm8917-pmi8940-mtp.dtb \
+	msm8917-pmi8950-cdp.dtb \
+	msm8917-pmi8950-ext-codec-cdp.dtb \
+	msm8917-pmi8950-mtp.dtb \
+	msm8917-pmi8937-rcm.dtb \
+	msm8917-pmi8940-rcm.dtb \
+	msm8917-pmi8950-rcm.dtb \
+	msm8917-qgp-tmo.dtb \
+	msm8917-pmi8937-qrd-sku5.dtb \
+	apq8017-pmi8937-cdp-wcd-rome.dtb \
+	apq8017-pmi8950-cdp-wcd-rome.dtb \
+	apq8017-no-pmi-wcd-rome-cdp.dtb
+
+dtb-$(CONFIG_ARCH_MSM8920) += msm8920-pmi8937-cdp.dtb \
+	msm8920-pmi8937-mtp.dtb \
+	msm8920-pmi8950-cdp.dtb \
+	msm8920-pmi8950-mtp.dtb \
+	msm8920-pmi8937-rcm.dtb \
+	msm8920-pmi8950-rcm.dtb \
+	msm8920-pmi8940-qrd-sku7.dtb \
+	msm8920-pmi8950-ext-codec-cdp.dtb
+
+dtb-$(CONFIG_ARCH_MSM8940) += msm8940-pmi8937-cdp.dtb \
+	msm8940-pmi8937-mtp.dtb \
+	msm8940-pmi8950-cdp.dtb \
+	msm8940-pmi8950-mtp.dtb \
+	msm8940-pmi8937-rcm.dtb \
+	msm8940-pmi8950-rcm.dtb \
+	msm8940-pmi8950-qrd-sku6.dtb \
+	msm8940-pmi8950-qrd-sku7.dtb \
+	msm8940-pmi8950-ext-codec-cdp.dtb \
+	msm8940-pmi8940-mtp.dtb \
+	msm8940-pmi8940-cdp.dtb \
+	msm8940-pmi8940-rcm.dtb \
+	msm8940-pmi8940-qrd-sku7.dtb
+
+dtb-$(CONFIG_ARCH_MSM8953) += msm8953-sim.dtb \
+	msm8953-rumi.dtb \
+	msm8953-cdp.dtb \
+	msm8953-mtp.dtb \
+	msm8953-ext-codec-mtp.dtb \
+	msm8953-qrd-sku3.dtb \
+	msm8953-rcm.dtb \
+	apq8053-rcm.dtb \
+	msm8953-ext-codec-rcm.dtb \
+	apq8053-cdp.dtb \
+	apq8053-ipc.dtb \
+	msm8953-ipc.dtb \
+	apq8053-mtp.dtb \
+	apq8053-ext-audio-mtp.dtb \
+	apq8053-ext-codec-rcm.dtb \
+	msm8953-cdp-1200p.dtb \
+	msm8953-iot-mtp.dtb \
+	apq8053-iot-mtp.dtb \
+	msm8953-pmi8940-cdp.dtb \
+	msm8953-pmi8940-mtp.dtb \
+	msm8953-pmi8937-cdp.dtb \
+	msm8953-pmi8937-mtp.dtb \
+	msm8953-pmi8940-ext-codec-mtp.dtb \
+	msm8953-pmi8937-ext-codec-mtp.dtb
+
+dtb-$(CONFIG_ARCH_SDM450) += sdm450-rcm.dtb \
+	sdm450-cdp.dtb \
+	sdm450-mtp.dtb \
+	sdm450-qrd.dtb \
+	sdm450-pmi8940-mtp.dtb \
+	sdm450-pmi8937-mtp.dtb
+
+dtb-$(CONFIG_ARCH_MDM9607) += mdm9607-rumi.dtb \
+	mdm9607-cdp.dtb \
+	mdm9607-mtp.dtb \
+	mdm9607-rcm.dtb \
+	mdm9607-mtp-sdcard.dtb \
+	mdm9607-ttp.dtb \
+	mdm9206-mtp.dtb \
+	mdm9206-cdp.dtb \
+	mdm9206-mtp-sdcard.dtb \
+	mdm9206-rcm.dtb
 
 dtb-$(CONFIG_ARCH_MSMHAMSTER) += msmhamster-rumi.dtb
 
