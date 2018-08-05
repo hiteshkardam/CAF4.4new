@@ -94,6 +94,17 @@ static irqreturn_t modem_err_fatal_intr_handler(int irq, void *dev_id)
 	return IRQ_HANDLED;
 }
 
+#if 1 //Modem_BSP++
+#include <linux/reboot.h>
+static irqreturn_t modem_reboot_intr_handler(int irq, void *dev_id)
+{
+       pr_info("%s: reboot device by modem!!\n",__func__);
+       machine_restart("oem-11");
+
+	return IRQ_HANDLED;
+}
+#endif //Modem_BSP--
+
 static irqreturn_t modem_stop_ack_intr_handler(int irq, void *dev_id)
 {
 	struct modem_data *drv = subsys_to_drv(dev_id);
@@ -219,6 +230,9 @@ static int pil_subsys_init(struct modem_data *drv,
 	drv->subsys_desc.ramdump = modem_ramdump;
 	drv->subsys_desc.crash_shutdown = modem_crash_shutdown;
 	drv->subsys_desc.err_fatal_handler = modem_err_fatal_intr_handler;
+#if 1 //Modem_BSP++
+	drv->subsys_desc.reboot_req_handler = modem_reboot_intr_handler;
+#endif //Modem_BSP--
 	drv->subsys_desc.stop_ack_handler = modem_stop_ack_intr_handler;
 	drv->subsys_desc.wdog_bite_handler = modem_wdog_bite_intr_handler;
 
