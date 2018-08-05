@@ -82,6 +82,7 @@ struct subsys_desc {
 	unsigned int err_ready_irq;
 	unsigned int stop_ack_irq;
 	unsigned int wdog_bite_irq;
+        int apps_reboot_gpio;
 	unsigned int generic_irq;
 	int force_stop_gpio;
 	int ramdump_disable_gpio;
@@ -95,6 +96,10 @@ struct subsys_desc {
 	bool system_debug;
 	bool ignore_ssr_failure;
 	const char *edge;
+#if 1 //Modem_BSP++
+       irqreturn_t (*reboot_req_handler) (int irq, void *dev_id);
+       unsigned int reboot_req_irq;
+#endif //Modem_BSP--
 };
 
 /**
