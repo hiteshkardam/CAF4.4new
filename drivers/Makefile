@@ -184,3 +184,19 @@ obj-$(CONFIG_BIF)		+= bif/
 obj-$(CONFIG_SENSORS_SSC)	+= sensors/
 obj-$(CONFIG_ESOC)              += esoc/
 obj-$(CONFIG_TEE)		+= tee/
+
+# HTC debug
+obj-$(CONFIG_HTC_DEBUG)		+= htc_debug/
+
+# <t-base drivers
+obj-$(CONFIG_TRUSTONIC_TEE)	+= gud/
+
+# htc_ril driver
+obj-y += htc_ril/
+
+#HTC LogLevel
+obj-$(CONFIG_HTC_LOGLEVEL)      += htc_loglevel/
+
+#HTC Security
+obj-$(CONFIG_HTC_MSM_SERIAL)    += htc_msm_serial/
+
