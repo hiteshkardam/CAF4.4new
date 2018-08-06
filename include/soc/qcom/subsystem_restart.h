@@ -119,6 +119,9 @@ struct notif_data {
 	struct platform_device *pdev;
 };
 
+extern void htc_smp2p_notify_modem_app_reboot( bool enable );
+extern bool htc_check_modem_crash_status ( void );
+
 #if defined(CONFIG_MSM_SUBSYSTEM_RESTART)
 
 extern int subsys_get_restart_level(struct subsys_device *dev);
