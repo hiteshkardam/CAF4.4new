@@ -22,7 +22,7 @@
 
 struct hdmi_edid_init_data {
 	struct kobject *kobj;
-	struct hdmi_util_ds_data ds_data;
+	struct hdmi_util_ds_data *ds_data;
 	u32 max_pclk_khz;
 	bool yc420_support;
 	u8 *buf;
@@ -63,6 +63,7 @@ int hdmi_edid_parser(void *edid_ctrl);
 u32 hdmi_edid_get_raw_data(void *edid_ctrl, u8 *buf, u32 size);
 u8 hdmi_edid_get_sink_scaninfo(void *edid_ctrl, u32 resolution);
 bool hdmi_edid_is_dvi_mode(void *input);
+u32 hdmi_edid_get_sink_mode(void *edid_ctrl);
 bool hdmi_edid_sink_scramble_override(void *input);
 bool hdmi_edid_get_sink_scrambler_support(void *input);
 bool hdmi_edid_get_scdc_support(void *input);
