@@ -32,7 +32,6 @@ endmenu
 
 source "drivers/video/backlight/Kconfig"
 source "drivers/video/adf/Kconfig"
-source "drivers/video/slimport/Kconfig"
 
 config VGASTATE
        tristate
@@ -53,11 +52,5 @@ if FB || SGI_NEWPORT_CONSOLE
 
 endif
 
-config FB_MINIFB
-	bool "Mini FB support"
-	depends on ION
-	default y if FB_MSM
-	---help---
-	  This is a `virtual' frame buffer device for some specific usage.
 
 endmenu
