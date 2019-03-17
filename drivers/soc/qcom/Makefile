@@ -29,6 +29,7 @@ obj-$(CONFIG_MSM_IPC_ROUTER_GLINK_XPRT)	+=	ipc_router_glink_xprt.o
 obj-$(CONFIG_MSM_SPCOM) += spcom.o
 obj-$(CONFIG_MSM_SPSS_UTILS) += spss_utils.o
 obj-y			+=	qdsp6v2/
+obj-y += rpm_stats_ver.o
 obj-$(CONFIG_MSM_SYSTEM_HEALTH_MONITOR)	+=	system_health_monitor_v01.o
 obj-$(CONFIG_MSM_SYSTEM_HEALTH_MONITOR)	+=	system_health_monitor.o
 obj-$(CONFIG_MSM_GLINK_PKT)	+=	msm_glink_pkt.o
@@ -39,7 +40,7 @@ obj-$(CONFIG_MSM_PIL_MSS_QDSP6V5) += pil-q6v5.o pil-msa.o pil-q6v5-mss.o
 obj-$(CONFIG_MSM_PIL)   +=      peripheral-loader.o
 obj-$(CONFIG_MSM_PFE_WA) += pfe-wa.o
 obj-$(CONFIG_ARCH_MSM8996) += msm_cpu_voltage.o
-
+obj-$(CONFIG_FPR_FPC)  += htc_smi.o
 obj-$(CONFIG_MSM_PERFORMANCE) += msm_performance.o
 obj-$(CONFIG_MSM_PASR) += pasr.o
 
